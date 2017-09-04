@@ -5,6 +5,7 @@ using UnityEngine;
 public class Brick : MonoBehaviour 
 {
 	public int maxHits;
+	public Sprite[] sprites;
 
 	private int currentHit;
 
@@ -14,11 +15,16 @@ public class Brick : MonoBehaviour
 		if (currentHit >= maxHits) 
 		{
 			Destroy (gameObject);
+		} 
+		else 
+		{
+			LoadSprites ();
 		}
 	}
 
-	void Update ()
+	void LoadSprites()
 	{
-		
+		int spriteIndex = currentHit - 1;
+		this.GetComponent<SpriteRenderer> ().sprite = sprites [spriteIndex];
 	}
 }
