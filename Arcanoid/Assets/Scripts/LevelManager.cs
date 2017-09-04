@@ -9,4 +9,17 @@ public class LevelManager : MonoBehaviour
 	{
 		SceneManager.LoadScene(name);
 	}
+
+	public void LoadNextLevel()
+	{
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+	}
+
+	public void BrickCount()
+	{
+		if (Brick.breakableCount == 0) 
+		{
+			LoadNextLevel ();
+		}
+	}
 }

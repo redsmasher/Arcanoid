@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61879327187451684}
   m_Layer: 0
   m_Name: GreenBrick
-  m_TagString: Untagged
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,9 +78,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b835d315b0dc3864fa3c146f5089aee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHits: 2
   sprites:
+  - {fileID: 21300006, guid: f825b7aba548f4b4589fca2fb3d6d0dc, type: 3}
   - {fileID: 21300008, guid: f825b7aba548f4b4589fca2fb3d6d0dc, type: 3}
+  levelManager: {fileID: 114500799281042176, guid: 161e35f858caa95458aa2e3a67c59d2b,
+    type: 2}
 --- !u!212 &212088764190547034
 SpriteRenderer:
   m_ObjectHideFlags: 1
